@@ -11,13 +11,16 @@ def home():
     return render_template("index.html")
 @app.route("/predict",methods=['POST'])
 def predict():
-    input=[]
-    for col in train_cols:
-        input.append(float(request.form[col]))
-    input=[input]
-    prediction=model.predict(input)
-    prediction="yes" if prediction==1 else "No"
-    return render_template("index.html",prediction=prediction)
+    try:
+        input=[]
+        for col in train_cols:
+            input.append(float(request.form[col]))
+        input=[input]
+        prediction=model.predict(input)
+        prediction="YES" if prediction==1 else "NO"
+        return render_template("index.html",prediction=prediction)
+    except Exception as e:
+        return render_template("index.html",prediction=e)
 
 if __name__=='__main__':
     app.run(debug=True)
