@@ -8,7 +8,7 @@ train_cols=['person_income', 'person_home_ownership', 'loan_amnt', 'loan_intent'
        'previous_loan_defaults_on_file']
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("home.html")
 @app.route("/predict",methods=['POST'])
 def predict():
     try:
@@ -17,10 +17,18 @@ def predict():
             input.append(float(request.form[col]))
         input=[input]
         prediction=model.predict(input)
-        prediction="YES" if prediction==1 else "NO"
-        return render_template("index.html",prediction=prediction)
+        prediction="LOAN APPROVED" if prediction==1 else "LOAN NOT APPROVED"
+        return render_template("result.html",prediction=prediction)
     except Exception as e:
-        return render_template("index.html",prediction=e)
+        return render_template("index.html",error="Fill all inputs")
+
+@app.route("/home")
+def predi():
+    return render_template("home.html")
+@app.route("/index")
+def index_page():
+    return render_template("index.html")
+
 
 if __name__=='__main__':
     app.run(debug=True)

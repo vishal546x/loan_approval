@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loan Approval Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+  <div class="split-page">
+
+    <!-- 🖼️ Left Side: Image -->
+    <div class="left-image">
+      <img src="{{ url_for('static', filename='loan.jpg') }}" alt="Loan Image">
+    </div>
+
+    <!-- 📄 Right Side: Content -->
+    <!-- 📄 Right Side: Content -->
+<div class="right-content">
+  <h1>Loan Approval Prediction</h1>
+  
+  <form action="/index">
+    <button type="submit" class="gold-button">Predict Now</button>
+  </form>
+</div>
+
+
+  </div>
+</body>
+</html>

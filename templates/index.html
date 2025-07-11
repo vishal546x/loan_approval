@@ -9,7 +9,9 @@
     <div class="div-container">
         <div class="box">
                 <h1>Fill the form</h1>
-
+                {% if error %}
+                <label style="color: aqua; text-align: center;">Result: {{error}}</label>
+                {% endif %}
                 <form action="/predict" method="POST">
                     <label for="id">person_age:</label><br>
                     <input type="number" class="custom-input" name="person_age"><br><br>
@@ -77,9 +79,7 @@
                         </select><br><br>
                     <button type="submit">submit</button>
                </form>
-                {% if prediction %}
-                <h1 class="result">Result: {{prediction}}</h1>
-                {% endif %}
+                
         </div>
     </div>
                 

@@ -1,0 +1,160 @@
+/* ✨ RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌆 Split Container */
+.split-page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🖼️ Left - Image */
+.left-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.left-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(4px) brightness(0.8);
+}
+
+/* 📄 Right - Content */
+.right-content {
+  flex: 1;
+  background-color: #111;
+  color: gold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.right-content h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  animation: slideDown 1s ease-out;
+}
+
+/* 🔘 Gold Button */
+.gold-button {
+  padding: 14px 32px;
+  font-size: 18px;
+  color: #111;
+  background: gold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  animation: bounceIn 1s ease;
+}
+
+.gold-button:hover {
+  background: #ffcc00;
+  transform: scale(1.05);
+  color: black;
+}
+
+/* 🔥 Animations */
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌌 Result Page Wrapper */
+body {
+  background-color: #111;
+  color: gold;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 215, 0, 0.05);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  animation: slideDown 1s ease-out;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.label {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: gold;
+}
+
+/* 📦 Result Box */
+.result-box {
+  font-size: 20px;
+  padding: 15px 25px;
+  border: 2px solid gold;
+  border-radius: 10px;
+  background-color: #222;
+  margin-bottom: 30px;
+  color: gold;
+  animation: bounceIn 1s ease;
+}
+
+/* 🔘 Gold Button (REUSE HOME PAGE STYLE) */
+.gold-button {
+  padding: 14px 32px;
+  font-size: 18px;
+  color: #111;
+  background: gold;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  margin: 10px;
+  animation: bounceIn 1s ease;
+  cursor: pointer;
+}
+
+.gold-button:hover {
+  background: #ffcc00;
+  transform: scale(1.05);
+  color: black;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
